@@ -28,7 +28,7 @@
             "requirement": "optional"
         },
         "stop_reason_id": {
-            "description": "The normalized reason the model completion ended. Producers map their runtime's native value into this set. Populate on completion events; when the value is 'Other', set <code>stop_reason</code> to the event source's native label.",
+            "description": "The normalized reason the model completion ended. Producers map their runtime's native value into this set. Populate on completion events; when the value is 'Other', set <code>stop_reason</code> to the event source's native label. Because an agent's behavior is bound to its configuration, weigh a shift in this attribute's distribution against <code>ai_agent.version</code> and <code>ai_agent.charter</code> before treating it as anomalous: a shift coincident with a new agent version or charter revision reflects an intended configuration change, while one with no matching change - especially within a single <code>ai_agent.instance_uid</code> - is the stronger signal of interference or manipulation.",
             "group": "context",
             "requirement": "recommended"
         }
