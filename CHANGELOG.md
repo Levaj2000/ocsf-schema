@@ -116,7 +116,7 @@ Thankyou! -->
 * #### Profiles
   1. Added `ai_agent` attribute to the `ai_operation` profile. [#1641](https://github.com/ocsf/ocsf-schema/pull/1641)
   1. Added `stop_reason`/`stop_reason_id` sibling attributes to the `ai_operation` profile, recording why a model completion ended. [#1704](https://github.com/ocsf/ocsf-schema/pull/1704)
-  1. Extended the `ai_operation` profile's `stop_reason_id` description to weigh distribution shifts against `ai_agent.version`/`ai_agent.charter` and `ai_agent.instance_uid`, distinguishing an intended configuration change from a signal of interference or manipulation. [#XXXX](https://github.com/ocsf/ocsf-schema/pull/XXXX)
+  1. Extended the `ai_operation` profile's `stop_reason_id` description to weigh distribution shifts against `ai_agent.version`/`ai_agent.charter` and `ai_agent.instance_uid`, distinguishing an intended configuration change from a signal of interference or manipulation. [#1](https://github.com/Levaj2000/ocsf-schema/pull/1)
 * #### Objects
   1. Added `job_actions` array of objects to the `job` object. [#1597](https://github.com/ocsf/ocsf-schema/pull/1597)
   1. Added `job_triggers` array of objects to the `job` object. [#1597](https://github.com/ocsf/ocsf-schema/pull/1597)
