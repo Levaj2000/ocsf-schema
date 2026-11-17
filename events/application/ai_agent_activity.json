@@ -47,39 +47,39 @@
     },
     "ai_agent_compact_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_permission_request_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_session_end_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_session_start_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_stop_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_tool_use_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_agent_user_prompt_submit_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_subagent_start_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "ai_subagent_stop_info": {
       "group": "primary",
-      "requirement": "optional"
+      "requirement": "recommended"
     }
   }
 }

@@ -5,11 +5,11 @@
   "name": "ai_agent_tool_use_info",
   "attributes": {
     "ai_tool_input": {
-      "description": "Describes the input provided to the tool by the AI agent.",
+      "description": "The arguments the AI agent passed to the tool. A serialized JSON string from the event source is deserialized exactly once, and JSON text inside the resulting string values is left as text. See the <code>ai_tool_input</code> dictionary attribute for the full rule.",
       "requirement": "recommended"
     },
     "ai_tool_response": {
-      "description": "Describes the response received by the AI agent from the tool. This attribute is not available when <code>is_pre_occurrence</code> is <code>true</code>.",
+      "description": "The result the tool returned to the AI agent. A serialized JSON string from the event source is deserialized exactly once, and JSON text inside the resulting string values is left as text. See the <code>ai_tool_response</code> dictionary attribute for the full rule. Not populated when <code>is_pre_occurrence</code> is <code>true</code>.",
       "requirement": "recommended"
     },
     "is_pre_occurrence": {
@@ -17,7 +17,7 @@
       "requirement": "required"
     },
     "name": {
-      "description": "The name of the invoked tool, e.g. <code>Bash</code>, <code>apply-patch</code>, <code>mcp__jira__search</code>, etc.",
+      "description": "The name of the invoked tool as the agent runtime reports it, e.g. <code>Bash</code>, <code>apply-patch</code>, or an MCP tool name such as <code>mcp__tickets__search</code>.",
       "requirement": "required"
     }
   }

@@ -342,13 +342,25 @@
     },
     "ai_tool_input": {
       "caption": "AI Tool Input",
-      "description": "Describes the input provided to a tool that is invoked by an AI agent.",
-      "type": "json_t"
+      "description": "The arguments an AI agent passed to a tool it invoked, recorded as a JSON value. When the event source provides the arguments as a serialized JSON string, such as the <code>arguments</code> field of a function call, the string is deserialized exactly once and the resulting value is recorded. String values inside that result are not deserialized again, even when they contain JSON text. A serialized string that is not valid JSON is recorded unchanged as a JSON string, and arguments the source already provides in structured form are recorded as provided. When the original serialized text must be kept, it belongs in <code>raw_data</code>. This matches the OpenTelemetry GenAI <code>gen_ai.tool.call.arguments</code> attribute.",
+      "type": "json_t",
+      "references": [
+        {
+          "description": "OpenTelemetry GenAI semantic conventions: gen_ai.tool.call.arguments",
+          "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/"
+        }
+      ]
     },
     "ai_tool_response": {
       "caption": "AI Tool Response",
-      "description": "Describes the response from a tool that is invoked by an AI agent.",
-      "type": "json_t"
+      "description": "The result a tool returned to the AI agent that invoked it, recorded as a JSON value. When the event source provides the result as a serialized JSON string, the string is deserialized exactly once and the resulting value is recorded. String values inside that result, such as a command's output or a file's contents, are not deserialized again, even when they contain JSON text. A result that is not valid JSON, such as plain text output, is recorded unchanged as a JSON string, and a result the source already provides in structured form is recorded as provided. When the original serialized text must be kept, it belongs in <code>raw_data</code>. This matches the OpenTelemetry GenAI <code>gen_ai.tool.call.result</code> attribute.",
+      "type": "json_t",
+      "references": [
+        {
+          "description": "OpenTelemetry GenAI semantic conventions: gen_ai.tool.call.result",
+          "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/"
+        }
+      ]
     },
     "aircraft": {
       "caption": "Aircraft",
